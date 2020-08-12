@@ -1,11 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 
 export default function App() {
 
-  const [name, setName] = useState('Jhon Doe');
-  const [age, setAge] = useState('30');
+  const [people, setPeople] = useState([
+    { id: 0, name: 'React' },
+    { id: 1, name: 'Node' },
+    { id: 2, name: 'React Native' },
+    { id: 3, name: 'Python' },
+    { id: 4, name: 'C++' },
+    { id: 5, name: 'Sass' },
+    { id: 6, name: 'mongoDb' },
+    { id: 7, name: 'Restfull API' }
+  ])
 
   const clickHandler = () => {
     setName('rass l botta');
@@ -13,28 +20,13 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-
-      <View style={styles.inputWrapper}>
-        <Text>Enter name:</Text>
-        <TextInput
-          style={styles.input}
-          placeholder='e.g Jhon Doe'
-          onChangeText={ val => setName(val) }
-        />
-      </View>
-
-      <View style={styles.inputWrapper}>
-        <Text>Enter age:</Text>
-        <TextInput
-          keyboardType='numeric'
-          style={styles.input}
-          placeholder='e.g 99'
-          onChangeText={ val => setAge(val) }
-        />
-      </View>
-
-      <Text>Name: {name}</Text>
-      <Text>Age: {age}</Text>
+      <ScrollView>
+        { people.map( item => (
+          <View key={item.id}>
+            <Text style={styles.item}>{item.name}</Text>
+          </View>
+        ))}
+      </ScrollView>
     </View>
   );
 }
@@ -43,16 +35,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 40,
+    paddingHorizontal: 20
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
-  inputWrapper: {
-    marginBottom: 10
-  },
-  input: {
-    borderBottomColor: '#ccc',
-    borderBottomWidth: 1,
-    padding: 8,
-    width: 300
+  item: {
+    marginTop: 24,
+    padding: 30,
+    backgroundColor: 'pink',
+    fontSize: 24
   }
 });
