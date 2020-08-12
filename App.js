@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, FlatList } from 'react-native';
 
 export default function App() {
 
@@ -20,30 +20,40 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <ScrollView>
+
+      <FlatList
+        keyExtractor={item => item.id}
+        data={people}
+        renderItem={({item}) => (
+          <Text style={styles.item}>{item.name}</Text>
+        )}
+      />
+
+      {/* <ScrollView>
         { people.map( item => (
           <View key={item.id}>
             <Text style={styles.item}>{item.name}</Text>
           </View>
         ))}
-      </ScrollView>
+      </ScrollView> */}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+
   container: {
     flex: 1,
     backgroundColor: '#fff',
     paddingTop: 40,
     paddingHorizontal: 20
-    // alignItems: 'center',
-    // justifyContent: 'center',
   },
+
   item: {
     marginTop: 24,
     padding: 30,
     backgroundColor: 'pink',
     fontSize: 24
   }
+  
 });

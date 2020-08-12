@@ -1,0 +1,32 @@
+{
+	"workbench.colorCustomizations": {
+		"activityBar.background": "#3B0E7B",
+		"titleBar.activeBackground": "#5314AC",
+		"titleBar.activeForeground": "#FCFAFE"
+	}
+
+	// "workbench.colorCustomizations": {
+	//     "activityBar.background": "#56171C",
+	//     "titleBar.activeBackground": "#782027",
+	//     "titleBar.activeForeground": "#FEFBFB"
+	// }
+
+	// "workbench.colorCustomizations": {
+	// 	"activityBar.background": "#13332E",
+	// 	"titleBar.activeBackground": "#19423B",
+	// 	"titleBar.activeForeground": "#F6FBFB",
+	//  }
+
+
+	// "workbench.colorCustomizations": {
+	//     "activityBar.background": "#05227C",
+	//     "titleBar.activeBackground": "#0830AE",
+	//     "titleBar.activeForeground": "#F9FBFF"
+	// }
+
+	// "workbench.colorCustomizations": {
+	//     "activityBar.background": "#0D3604",
+	//     "titleBar.activeBackground": "#124B06",
+	//     "titleBar.activeForeground": "#F2FEEF"
+	// }
+}
