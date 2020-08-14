@@ -63,11 +63,15 @@ const styles = StyleSheet.create({
   },
 
   content: {
+    flex: 1,
     padding: 40
+    // backgroundColor: 'hotpink'
   },
 
   list: {
+    flex: 1,
     marginTop: 20
+    // backgroundColor: 'skyblue'
   }
 
 });

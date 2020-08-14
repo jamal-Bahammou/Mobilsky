@@ -12,7 +12,7 @@ const AddTodo = ({ addTodoHandler }) => {
                 onChangeText={val => setText(val)}
                 clearButtonMode='always'
             />
-            <Button onPress={() => addTodoHandler(text)} title='add todo' color='coral' />
+            <Button onPress={() => addTodoHandler(text)} title='add todo' color='skyblue' />
         </View>
     );
 }
