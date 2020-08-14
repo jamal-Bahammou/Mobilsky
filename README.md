@@ -1,4 +1,4 @@
-# Todmby MOBILE APP
+# Todmby Mobile app
 
 ![Thumbnail](Todmby.jpeg)
 
